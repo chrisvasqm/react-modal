@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from "./components/Modal";
+import Button from "./components/Button";
 
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -33,6 +34,9 @@ function App() {
         <button type="submit">Show modal</button>
         <Modal title="Title" message="Message" isOpen={isModalOpen} onClose={closeModal} />
       </form>
+
+      <h2>Button</h2>
+      <Button onClick={() => alert('Clicked')}>Click me</Button>
     </div>
   )
 }

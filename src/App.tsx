@@ -35,8 +35,9 @@ function App() {
         <Modal title="Title" message="Message" isOpen={isModalOpen} onClose={closeModal} />
       </form>
 
-      <h2>Button</h2>
+      <h2>Buttons</h2>
       <Button onClick={() => alert('Clicked')}>Click me</Button>
+      <Button backgroundColor="#42A5F5" hoverColor="#1E88E5" onClick={() => alert('Clicked')}>Click me</Button>
     </div>
   )
 }

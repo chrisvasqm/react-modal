@@ -9,11 +9,12 @@ interface Props {
     border?: string;
     borderRadius?: string;
     padding?: string;
+    hoverColor?: string;
 
     onClick: () => void;
 }
 
-function Button({ children, color, backgroundColor, fontSize, border, borderRadius, padding, onClick }: Props) {
+function Button({ children, color, backgroundColor, fontSize, border, borderRadius, padding, hoverColor, onClick }: Props) {
     const [isHovered, setIsHovered] = useState(false);
 
     const style = {
@@ -28,7 +29,7 @@ function Button({ children, color, backgroundColor, fontSize, border, borderRadi
     };
 
     const hoverStyle = {
-        backgroundColor: '#2c7a7b',
+        backgroundColor: hoverColor ?? '#2c7a7b',
     };
 
     const handleMouseEnter = () => {
